@@ -1,5 +1,8 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { FiDownload } from "react-icons/fi";
 
-export default function Home() {
+const Home = () => {
   return <main>homepage</main>;
 }
+
+export default Home;
