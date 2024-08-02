@@ -4,7 +4,8 @@ import "./globals.css";
 
 // import components
 import Social from "@/components/Social";
-import Link from 'next/link'
+import Photo from "@/components/Photo";
+import Link from 'next/link';
 
 const Home = () => {
   return (
@@ -34,13 +35,18 @@ const Home = () => {
               </Button>
             </Link>
               <div className="mb-8 xl:mb-0">
-                <Social consainerStyles="flex gap-6" iconStyles="w-9 h-9 border 
-                border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-250" />
+                <Social containerStyles="flex gap-3" 
+                iconStyles="w-9 h-9 border 
+                border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent
+                hover:text-primary hover:transition-all duration-250" 
+                />
               </div>
             </div>
           </div>
           {/* image */}
-          <div>photo</div>
+          <div>
+            <Photo />
+          </div>
         </div>
       </div>
     </section>
