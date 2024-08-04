@@ -5,6 +5,7 @@ import "./globals.css";
 // import components
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 import Link from 'next/link';
 
 const Home = () => {
@@ -48,6 +49,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Stats />
     </section>
   );
 };
