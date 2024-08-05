@@ -36,6 +36,7 @@ const Photo = () => {
         fill="transparent"
         viewBox="0 0 506 506"
         xmlns="http://www.w3.org/2000/svg"
+        delay="5"
       >
         <motion.circle 
           cx="253" 
@@ -45,15 +46,18 @@ const Photo = () => {
           strokeWidth="4" 
           strokeLinecap="round" 
           strokeLinejoin="round"
-          initial={{ strokeDasharray: "24 10 0 0"}}
+          initial={{ 
+            opacity: 0,
+            strokeDasharray: "24 10 0 0"}}
           animate={{ 
+            opacity: 1,
             strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
             rotate: [120, 360],          
           }} 
           transition={{
-            duration: 20, 
-            repeat: Infinity,
-            repeatType: "reverse",
+            opacity: { duration: 0, delay: .75 },
+            strokeDasharray: { duration: 20, repeat: Infinity, repeatType: "reverse" },
+            rotate: { duration: 20, repeat: Infinity, repeatType: "reverse" }
           }}
         />
       </motion.svg>
