@@ -34,7 +34,7 @@ const about = {
     { fieldName: " Nationality", fieldValue: "Cuban-Chile " },
     {
       fieldName: "🎲 Hobby",
-      fieldValue: 'Yo-yoing' ,
+      fieldValue: 'Playing video games, watching anime, and coding',
     },
     { fieldName: "🗣️ Languages", fieldValue: "French " },
   ],
