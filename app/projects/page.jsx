@@ -24,7 +24,7 @@ const projectlist = [
     num: "01",
     category: "Frontend",
     title: "project 1",
-    description: "insert description later tito",
+    description: "project1 description tito",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS" }],
     image: "/assets/projects/project1.png", //change later
     live: "",
@@ -97,8 +97,7 @@ const Work = () => {
               <div className="border border-white/20"> </div>
               {/* button */}
               <div className="flex items-center gap-4">
-                {/* live project button - deployed projects */}
-                {/* <Link href={project.live}>
+                <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -109,7 +108,13 @@ const Work = () => {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link> */}
+                </Link>
+
+
+
+
+
+
                 {/* github project button */}
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
