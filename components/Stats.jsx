@@ -9,7 +9,7 @@ const stats = [
   },
   {
     num: 17,
-    text: "Shits farted",
+    text: "Technologies Learned",
   },
   {
     num: 26,
