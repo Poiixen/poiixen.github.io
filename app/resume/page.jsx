@@ -5,6 +5,7 @@ import ReactCardFlip from "react-card-flip";
 
 import { SiCplusplus, SiNextdotjs, SiTypescript } from "react-icons/si";
 import { GiProcessor } from "react-icons/gi";
+import Image from 'next/image';
 
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -105,7 +106,7 @@ const education = {
   description: "Clike to learn more!",
   items: [
     {
-      image: "",
+      image: "/codepath.jpg",
       institution: "University of Florida",
       degree: "Bachelor of Science - Computer Science",
       duration: "August 2022 - Present",
@@ -119,7 +120,7 @@ const education = {
       details: "Details about the CodePath program...",
     },
     {
-      image: "",
+      image: "/codepath.jpg",
       institution: "Codecademy",
       degree: "WIP",
       duration: "WIP",
