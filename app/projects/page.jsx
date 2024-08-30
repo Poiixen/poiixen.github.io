@@ -25,7 +25,7 @@ const projectlist = [
     category: "Customer Support AI",
     description: "project1 description tito",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS"}, { name: "Llama 3.1 API" }],
-    image: "/assets/projects/project1.png", //change later
+    image: "/assets/aisupport.png",
     live: "",
     github: "",
   },
@@ -34,7 +34,7 @@ const projectlist = [
     category: "Backend",
     description: "insert description later tito",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS" }],
-    image: "/assets/projects/project2.png", //change later
+    image: "/assets/aisupport.png",
     live: "",
     github: "",
   },
@@ -43,7 +43,7 @@ const projectlist = [
     category: "Frontend",
     description: "insert description later tito",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS" }],
-    image: "/assets/projects/project3.png", //change later
+    image: "/public/aisupport.png",
     live: "",
     github: "",
   },
