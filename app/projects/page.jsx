@@ -1,6 +1,6 @@
 "use client";
 
-import { m, motion } from "framer-motion";
+import { m , motion } from "framer-motion";
 import React, { useState } from 'react'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,8 +22,7 @@ import { TooltipTrigger } from "@radix-ui/react-tooltip";
 const projectlist = [
   {
     num: "01",
-    category: "Frontend",
-    title: "Customer Support AI",
+    category: "Customer Support AI",
     description: "project1 description tito",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS"}, { name: "Llama 3.1 API" }],
     image: "/assets/projects/project1.png", //change later
@@ -33,7 +32,6 @@ const projectlist = [
   {
     num: "02",
     category: "Backend",
-    title: "project 2",
     description: "insert description later tito",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS" }],
     image: "/assets/projects/project2.png", //change later
@@ -43,7 +41,6 @@ const projectlist = [
   {
     num: "03",
     category: "Frontend",
-    title: "project 3",
     description: "insert description later tito",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS" }],
     image: "/assets/projects/project3.png", //change later
@@ -80,7 +77,7 @@ const Work = () => {
 
               {/* project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.category} 
               </h2>
               {/* project description */}
               <p className="text-white/60"> {project.description} </p>
