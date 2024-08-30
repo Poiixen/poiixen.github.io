@@ -23,9 +23,9 @@ const projectlist = [
   {
     num: "01",
     category: "Frontend",
-    title: "project 1",
+    title: "Customer Support AI",
     description: "project1 description tito",
-    stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS" }],
+    stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS"}, { name: "Llama 3.1 API" }],
     image: "/assets/projects/project1.png", //change later
     live: "",
     github: "",
