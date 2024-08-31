@@ -33,17 +33,24 @@ const experience = {
   items: [
     {
       image: "/assets/theheadstarter_logo.jfif",
-      company: "Headstarter AI",
-      position: "Software Engineering Fellow",
+      institution: "Headstarter AI",
+      degree: "SWE Fellow",
       duration: "July 2024 - October 2024 ",
-      description: "twas cool",
+      details: "Built and deployed 5 AI projects in 5 weeks using React JS, Next.js, Firebase, Clerk, and Vercel, following agile methodologies with weekly sprints and incorporated CI/CD practices for iterative deployment. Participate in weekly sessions with engineers from Google, Y Combinator, Stanford, Amazon and venture-backed startups",
     },
     {
       image: "/assets/uflogo`.png",
-      company: "UFKB",
-      position: "Instructor",
+      institution: "UFKB",
+      degree: "Boxing Instructor",
       duration: "July 2022 - October 2026 ",
-      description: "Taught kids",
+      details: "Taught kids",
+    },
+    {
+      image: "/assets/code2040.png",
+      institution: "Code2040",
+      degree: "Fellow",
+      duration: "July 2022 - August 2024",
+      details: "Taught kids",
     },
   ],
 };
@@ -91,7 +98,6 @@ const skills = {
   ],
 };
 
-
 const education = {
   icon: "/assests/resume/cap.svg",
   title: "My Education",
@@ -130,11 +136,11 @@ const Card = ({ item }) => {
 
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+      {/* Front Side */}
       <div
-        className="flip-card bg-[#232329] h-[284px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+        className={`flip-card bg-[#232329] h-[284px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 cursor-pointer ${isFlipped ? 'flipped' : ''}`}
         onClick={handleClick}
       >
-        {/* Front Side */}
         <span className="rounded-full overflow-hidden w-[100px] h-[100px] flex justify-center items-center">
           <img
             src={item.image}
@@ -154,7 +160,7 @@ const Card = ({ item }) => {
 
       {/* Back Side */}
       <div
-        className="flip-card bg-[#232329] h-[284px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+        className={`flip-card bg-[#232329] h-[284px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 cursor-pointer ${isFlipped ? 'flipped' : ''}`}
         onClick={handleClick}
       >
         <h3 className="text-xl text-center lg:text-left">
@@ -164,7 +170,6 @@ const Card = ({ item }) => {
     </ReactCardFlip>
   );
 };
-
 
 const Resume = () => {
   return (
@@ -178,12 +183,14 @@ const Resume = () => {
     >
       <div className="container mx-auto">
         <Tabs defaultValue="education" className="flex flex-col xl:flex-row gap-[60px]">
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <div className="flex justify-start">
+          <TabsList className="flex flex-col w-full max-w-[380px] custom-left-margin xl:mx-0 gap-6">
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
+          </div>
 
           {/* Education */}
           <TabsContent value="education" className="w-full">
