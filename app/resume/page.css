@@ -26,3 +26,9 @@
 .custom-left-margin {
   margin-left: 20px; /* Adjust this value as needed */
 }
+
+.red-bar {
+  margin-left: -20px; /* Move it more to the left */
+  width: 10px; /* Make it wider */
+  height: 100%; /* Adjust height to fit your design */
+}
