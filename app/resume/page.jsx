@@ -23,35 +23,27 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-
 const about = {
-  title: "About me",
-  description: " Who am I?",
-  info: [
-    { fieldName: "👤 Name ", fieldValue: "Jorge Garcia" },
-    // { fieldName: "📞 Phone ", fieldValue: "(786) 212 5112 " },
-    { fieldName: " 💻 Coding Expertise", fieldValue: "3+ Years " },
-    { fieldName: "🎓 Major ", fieldValue: "Computer Science" },
-    { fieldName: " Nationality", fieldValue: "Cuban-Chile " },
-    {
-      fieldName: "🎲 Hobby",
-      fieldValue: 'Playing video games, watching anime, and coding',
-    },
-    { fieldName: "🗣️ Languages", fieldValue: "French " },
-  ],
 };
 
 const experience = {
   icon: "/assests/resume/badge.svg",
-  title: "My experience",
+  title: "My Experience",
   description: "Where have I made an impact?",
   items: [
     {
-      image: "/images.png",
+      image: "/assets/theheadstarter_logo.jfif",
       company: "Headstarter AI",
       position: "Software Engineering Fellow",
       duration: "July 2024 - October 2024 ",
       description: "twas cool",
+    },
+    {
+      image: "/assets/uflogo`.png",
+      company: "UFKB",
+      position: "Instructor",
+      duration: "July 2022 - October 2026 ",
+      description: "Taught kids",
     },
   ],
 };
@@ -106,21 +98,21 @@ const education = {
   description: "Clike to learn more!",
   items: [
     {
-      image: "/codepath.jpg",
+      image: "/assets/uflogo.png",
       institution: "University of Florida",
       degree: "Bachelor of Science - Computer Science",
       duration: "August 2022 - Present",
       details: "Details about the course at University of Florida...",
     },
     {
-      image: "/codepath.jpg",
+      image: "/assets/codepath.jpg",
       institution: "CodePath",
       degree: "Technical Interview Prep",
       duration: "September 2024 - August 2024",
       details: "Details about the CodePath program...",
     },
     {
-      image: "/codepath.jpg",
+      image: "/assets/codepath.jpg",
       institution: "Codecademy",
       degree: "WIP",
       duration: "WIP",
@@ -139,14 +131,15 @@ const Card = ({ item }) => {
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
       <div
-        className="bg-[#232329] h-[284px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+        className="flip-card bg-[#232329] h-[284px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
         onClick={handleClick}
       >
-        <span className="rounded-full overflow-hidden w-[100px] h-[100px]">
+        {/* Front Side */}
+        <span className="rounded-full overflow-hidden w-[100px] h-[100px] flex justify-center items-center">
           <img
             src={item.image}
             alt={item.institution}
-            className="max-w-full max-h-full object-cover"
+            className="w-full h-full object-cover"
           />
         </span>
         <span className="text-accent">{item.institution}</span>
@@ -159,8 +152,9 @@ const Card = ({ item }) => {
         </div>
       </div>
 
+      {/* Back Side */}
       <div
-        className="bg-[#232329] h-[284px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+        className="flip-card bg-[#232329] h-[284px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
         onClick={handleClick}
       >
         <h3 className="text-xl text-center lg:text-left">
@@ -183,10 +177,10 @@ const Resume = () => {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
-        <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
+        <Tabs defaultValue="education" className="flex flex-col xl:flex-row gap-[60px]">
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
@@ -241,14 +235,14 @@ const Resume = () => {
           {/* Experience */}
           <TabsContent value="experience" className="w-full">
             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-              <h3 className="text-4xl font-bold">{experience.items.company}</h3>
+              <h3 className="text-4xl font-bold">{experience.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                {experience.items.position}
+                {experience.description}
               </p>
               <ScrollArea className="h-[400px]">
                 <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                  {education.items.map((item, index) => (
-                  <Card key={index} item={item} />
+                  {experience.items.map((item, index) => (
+                    <Card key={index} item={item} />
                   ))}
                 </ul>
               </ScrollArea>
@@ -269,7 +263,7 @@ const Resume = () => {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                   <li className="bg-gray-700 p-4 rounded-lg flex items-start gap-4">
                     <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-600">
-                      <img src="path/to/image1.jpg" alt="Highlight 1" className="object-cover w-full h-full" />
+                      <img src="" alt="Highlight 1" className="object-cover w-full h-full" />
                     </div>
                     <div>
                       <h5 className="text-xl font-semibold text-white">Highlight Title 1</h5>
@@ -278,7 +272,7 @@ const Resume = () => {
                   </li>
                   <li className="bg-gray-700 p-4 rounded-lg flex items-start gap-4">
                     <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-600">
-                      <img src="path/to/image2.jpg" alt="Highlight 2" className="object-cover w-full h-full" />
+                      <img src="" alt="Highlight 2" className="object-cover w-full h-full" />
                     </div>
                     <div>
                       <h5 className="text-xl font-semibold text-white">Highlight Title 2</h5>
