@@ -23,7 +23,7 @@ const projectlist = [
   {
     num: "01",
     category: "Customer Support AI",
-    description: "project1 description tito",
+    description: "An AI chatbot that delivers intelligent, responsive interactions. It includes features like message splitting and auto-scrolling to enhance user experience.",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS"}, { name: "Llama 3.1 API" }],
     image: "/assets/aisupport.png",
     live: "https://customer-support-ai-one.vercel.app",
@@ -31,8 +31,8 @@ const projectlist = [
   },
   {
     num: "02",
-    category: "Backend",
-    description: "insert description later tito",
+    category: "Reticketer",
+    description: "An all-in-one ticket reselling platform for any event, at any time. Created during Headstarter AI's 24-hour hackathon.",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS" }],
     image: "/assets/reticketer.png",
     live: "https://reticketer.vercel.app",
@@ -40,12 +40,12 @@ const projectlist = [
   },
   {
     num: "03",
-    category: "Frontend",
-    description: "insert description later tito",
+    category: "Minesweeper",
+    description: "A complete recreation of the classic Minesweeper game using C++'s SFML Library.",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS" }],
-    image: "/public/aisupport.png",
-    live: "",
-    github: "",
+    image: "/assets/minesweeper.png",
+    live: "https://github.com/Poiixen/Minesweeper",
+    github: "https://github.com/Poiixen/Minesweeper",
   },
 
 ];
