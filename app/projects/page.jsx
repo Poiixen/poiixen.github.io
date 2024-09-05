@@ -42,7 +42,7 @@ const projectlist = [
     num: "03",
     category: "Minesweeper",
     description: "A complete recreation of the classic Minesweeper game using C++'s SFML Library.",
-    stack: [{ name: "React" }, { name: "Next.js" }, { name: "TailwindCSS" }],
+    stack: [{ name: "C++" }, { name: "SFML" }, { name: "OOP" }],
     image: "/assets/minesweeper.png",
     live: "https://github.com/Poiixen/Minesweeper",
     github: "https://github.com/Poiixen/Minesweeper",

@@ -15,6 +15,8 @@ import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { FaHtml5, FaCss3, FaJs, FaReact } from "react-icons/fa";
 import { DiPython } from "react-icons/di";
 
+import { HoverEffect } from "../ui/card-hover-effect";
+
 //other sections
 import {
   Tooltip,
@@ -172,6 +174,14 @@ const Card = ({ item }) => {
     </ReactCardFlip>
   );
 };
+
+export function CardHoverEffectDemo() {
+  return (
+    <div className="max-w-5xl mx-auto px-8">
+      <HoverEffect items={projects} />
+    </div>
+  );
+}
 
 const Resume = () => {
   return (
