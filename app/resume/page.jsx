@@ -185,7 +185,7 @@ const Resume = () => {
     >
       <div className="container mx-left">
       <h2 className="text-3xl font-bold text-center mb-8">My Resume</h2>
-      <Tabs defaultValue="experience">
+      <Tabs defaultValue="education">
         <TabsList className="flex justify-center gap-4 mb-6">
           <TabsTrigger value="education">Education</TabsTrigger>
           <TabsTrigger value="experience">Experience</TabsTrigger>
@@ -282,7 +282,7 @@ const Resume = () => {
                     </div>
                     <div>
                       <h5 className="text-xl font-semibold text-white">Highlight Title 1</h5>
-                      <p className="text-gray-400">Description of highlight 1 goes here.</p>
+                      <p className="text-gray-400">desc</p>
                     </div>
                   </li>
                   <li className="bg-gray-700 p-4 rounded-lg flex items-start gap-4">
@@ -297,7 +297,7 @@ const Resume = () => {
                     </div>
                     <div>
                       <h5 className="text-xl font-semibold text-white">Highlight Title 2</h5>
-                      <p className="text-gray-400">Description of highlight 2 goes here.</p>
+                      <p className="text-gray-400">desc</p>
                     </div>
                   </li>
                 </ul>
