@@ -142,11 +142,13 @@ const Card = ({ item }) => {
         onClick={handleClick}
       >
         <span className="rounded-full overflow-hidden w-[100px] h-[100px] flex justify-center items-center">
-          <img
-            src={item.image}
-            alt={item.institution}
-            className="w-full h-full object-cover"
-          />
+        <Image
+          src={item.image}
+          alt={item.institution}
+          width={100}
+          height={100}
+          className="w-full h-full object-cover"
+        />
         </span>
         <span className="text-accent">{item.institution}</span>
         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -164,7 +166,7 @@ const Card = ({ item }) => {
         onClick={handleClick}
       >
         <h3 className="text-xl text-center lg:text-left">
-          {item.details}
+          {item.details.replace(/'/g, '&#39;')}
         </h3>
       </div>
     </ReactCardFlip>
@@ -270,7 +272,13 @@ const Resume = () => {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                   <li className="bg-gray-700 p-4 rounded-lg flex items-start gap-4">
                     <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-600">
-                      <img src="" alt="Highlight 1" className="object-cover w-full h-full" />
+                    <Image 
+                      src="" 
+                      alt="Highlight 1" 
+                      width={100} 
+                      height={100} 
+                      className="object-cover w-full h-full" 
+                    />
                     </div>
                     <div>
                       <h5 className="text-xl font-semibold text-white">Highlight Title 1</h5>
@@ -279,7 +287,13 @@ const Resume = () => {
                   </li>
                   <li className="bg-gray-700 p-4 rounded-lg flex items-start gap-4">
                     <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-600">
-                      <img src="" alt="Highlight 2" className="object-cover w-full h-full" />
+                    <Image 
+                      src="" 
+                      alt="Highlight 1" 
+                      width={100} 
+                      height={100} 
+                      className="object-cover w-full h-full" 
+                    />
                     </div>
                     <div>
                       <h5 className="text-xl font-semibold text-white">Highlight Title 2</h5>
