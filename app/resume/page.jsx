@@ -265,7 +265,7 @@ const Resume = () => {
                 About Me
               </h3>
               <p className="max-w-3xl text-gray-300 mx-auto xl:mx-0">
-                Hi, I'm Jorge Garcia, a passionate computer science student with a diverse range of skills and interests. I'm always eager to take on new challenges and continue learning and growing.
+                Hi, I&apos;m Jorge Garcia, a passionate computer science student with a diverse range of skills and interests. I&apos;m always eager to take on new challenges and continue learning and growing.
               </p>
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                 <h4 className="text-2xl font-semibold text-accent">Highlights</h4>
