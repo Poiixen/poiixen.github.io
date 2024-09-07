@@ -56,7 +56,7 @@ const experience = {
 };
 
 const skills = {
-  title: "My skills",
+  title: "My Skills",
   description: "Here is my tech stack! ",
   skillList: [
     {
@@ -101,7 +101,7 @@ const skills = {
 const education = {
   icon: "/assests/resume/cap.svg",
   title: "My Education",
-  description: "Clike to learn more!",
+  description: "Click to learn more!",
   items: [
     {
       image: "/assets/uflogo.png",
@@ -212,12 +212,12 @@ const Resume = () => {
           </TabsContent>
 
           {/* Skills */}
-          <TabsContent value="skills" className="w-full h-full">
+          <TabsContent value="skills" className="text-lg w-full">
             <div className="flex flex-col gap-[30px]">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{skills.title}</h3>
+              <div className="flex flex-col gap-[10px] text-center xl:text-left">
+                <h3 className="text-2xl font-bold">{skills.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {skills.description}
+                {skills.description}
                 </p>
               </div>
               <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
@@ -242,9 +242,9 @@ const Resume = () => {
           </TabsContent>
 
           {/* Experience */}
-          <TabsContent value="experience" className="w-full">
-            <div className="flex flex-col gap-[30px] text-center xl:text-left">
-              <h3 className="text-4xl font-bold">{experience.title}</h3>
+          <TabsContent value="experience" className="text-lg w-full">
+            <div className="flex flex-col gap-[10px] text-center xl:text-left">
+              <h3 className="text-2xl font-bold">{experience.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                 {experience.description}
               </p>
