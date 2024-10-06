@@ -63,7 +63,7 @@ const Home = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="h-screen flex flex-col justify-center items-center">
+      <section id="projects" className="h-screen mx-auto flex flex-col justify-center items-center">
         <Work />
       </section>
 
