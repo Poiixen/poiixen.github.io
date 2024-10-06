@@ -190,9 +190,7 @@ const Resume = () => {
           <TabsTrigger value="education">Education</TabsTrigger>
           <TabsTrigger value="experience">Experience</TabsTrigger>
           <TabsTrigger value="skills">Skills</TabsTrigger>
-          <TabsTrigger value="about">About Me</TabsTrigger>
         </TabsList>
-
 
           {/* Education */}
           <TabsContent value="education" className="text-lg w-full">
@@ -255,53 +253,6 @@ const Resume = () => {
                   ))}
                 </ul>
               </ScrollArea>
-            </div>
-          </TabsContent>
-
-          {/* About Me */}
-          <TabsContent value="about" className="w-full">
-            <div className="flex flex-col gap-8 text-center xl:text-left">
-              <h3 className="text-4xl font-bold text-gradient bg-clip-text text-transparent">
-                About Me
-              </h3>
-              <p className="max-w-3xl text-gray-300 mx-auto xl:mx-0">
-                Hi, I&apos;m Jorge Garcia, a passionate computer science student with a diverse range of skills and interests. I&apos;m always eager to take on new challenges and continue learning and growing.
-              </p>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h4 className="text-2xl font-semibold text-accent">Highlights</h4>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                  <li className="bg-gray-700 p-4 rounded-lg flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-600">
-                    <Image 
-                      src="" 
-                      alt="Highlight 1" 
-                      width={100} 
-                      height={100} 
-                      className="object-cover w-full h-full" 
-                    />
-                    </div>
-                    <div>
-                      <h5 className="text-xl font-semibold text-white">Highlight Title 1</h5>
-                      <p className="text-gray-400">desc</p>
-                    </div>
-                  </li>
-                  <li className="bg-gray-700 p-4 rounded-lg flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-600">
-                    <Image 
-                      src="" 
-                      alt="Highlight 1" 
-                      width={100} 
-                      height={100} 
-                      className="object-cover w-full h-full" 
-                    />
-                    </div>
-                    <div>
-                      <h5 className="text-xl font-semibold text-white">Highlight Title 2</h5>
-                      <p className="text-gray-400">desc</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
             </div>
           </TabsContent>
         </Tabs>
