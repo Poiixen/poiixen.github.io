@@ -57,13 +57,14 @@ const Home = () => {
       </div>
       <Stats />
     
+
       {/* Resume Section */}
-      <section id="resume" className="h-screen flex flex-col justify-center items-center">
+      <section id="resume" className="h-screen flex flex-col justify-center items-center mt-40 mb-80">
         <Resume />
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="h-screen mx-auto flex flex-col justify-center items-center">
+      <section id="projects" className="h-screen mx-auto flex flex-col justify-center items-center mb-10">
         <Work />
       </section>
 
