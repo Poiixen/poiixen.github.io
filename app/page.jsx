@@ -15,7 +15,13 @@ import About from "./about/page";
 
 const Home = () => {
   return (
-    <section className="h-full">
+    <section
+      className="h-full"
+      style={{
+        transform: "scale(0.85)",
+        transformOrigin: "top center",
+      }}
+    >
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-6 xl:pb-6">
           {/* text */}
@@ -49,14 +55,15 @@ const Home = () => {
               </div>
             </div>
           </div>
+
           {/* image */}
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
         </div>
       </div>
+
       <Stats />
-    
 
       {/* Resume Section */}
       <section id="resume" className="h-screen flex flex-col justify-center items-center mt-40 mb-80">
@@ -77,8 +84,8 @@ const Home = () => {
       <section id="contact" className="h-screen flex flex-col justify-center items-center">
         <Contact />
       </section>
-
     </section>
   );
 };
+
 export default Home;

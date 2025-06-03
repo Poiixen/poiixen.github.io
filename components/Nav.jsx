@@ -1,41 +1,41 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
 const links = [
-    {
-        name: "home",
-        path: "/",
-    },
-    {
-        name: "resume",
-        path: "/resume",
-    },
-    {
-        name: "projects",
-        path: "/projects",
-    },
-    {
-        name: "contact",
-        path: "/contact",
-    },
-]
+  { name: "home", path: "home" },
+  { name: "resume", path: "resume" },
+  { name: "projects", path: "projects" },
+  { name: "contact", path: "contact" },
+];
+
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const Nav = () => {
-    const pathname = usePathname();
-    console.log(pathname);
-    return (
-        <nav className='flex gap-8'>
-            {links.map((link, index) => (
-                <Link href={link.path} key={index} className={
-                    `${link.path === pathname && 'text-accent border-b-2 border-accent'} capitalize font-medium hover:text-accent transition-all`
-                }>
-                    {link.name}
-                </Link>
-            ))}
-        </nav>
-    );
+  return (
+    <section
+      className="h-full"
+      style={{
+        transform: "scale(0.9)",
+        transformOrigin: "top center",
+      }}
+    >
+    <nav className="flex gap-8">
+      {links.map((link, index) => (
+        <button
+          key={index}
+          onClick={() => scrollToSection(link.path)}
+          className="capitalize font-medium hover:text-accent transition-all"
+        >
+          {link.name}
+        </button>
+      ))}
+    </nav>
+    </section>
+  );
 };
 
 export default Nav;
