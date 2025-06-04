@@ -6,63 +6,84 @@ import Image from "next/image";
 
 const resumeItems = [
   {
-    title: "SWE Fellow @ Headstarter AI",
+    company: "Housing Assembly, EDU Africa",
+    role: "Project Manager, Software Engineer",
     date: "Jul 2024 - Oct 2024",
     image: "/assets/theheadstarter_logo.jfif",
     bullets: [
       "Built and deployed 5 AI projects using React JS, Next.js, Firebase, Clerk, and Vercel.",
       "Agile methodologies with weekly sprints and CI/CD practices.",
-      "Participated in sessions with engineers from Google, YC, Stanford, Amazon."
+      "Participated in sessions with engineers from Google, YC, Stanford, Amazon.",
     ],
   },
   {
-    title: "Boxing Instructor @ UFKB",
-    date: "Jul 2022 - Oct 2026",
-    image: "/assets/uflogo.png",
+    company: "Headstarter AI",
+    role: "Software Engineer Fellow",
+    date: "Jul 2024 - Oct 2024",
+    image: "/assets/theheadstarter_logo.jfif",
     bullets: [
-      "Guided ~50 students in proper boxing technique emphasizing safety.",
-      "Introduced beginners to boxing in engaging sessions."
+      "Built and deployed 5 AI projects using React JS, Next.js, Firebase, Clerk, and Vercel.",
+      "Agile methodologies with weekly sprints and CI/CD practices.",
+      "Participated in sessions with engineers from Google, YC, Stanford, Amazon.",
     ],
   },
   {
-    title: "Fellow @ Code2040",
+    company: "Code2040",
+    role: "Software Engineer Fellow",
     date: "Jul 2022 - Aug 2024",
     image: "/assets/code2040.png",
     bullets: [
       "Career accelerator for Black and Latine CS students.",
-      "Focused on equity advocacy, workshops, and networking."
+      "Focused on equity advocacy, workshops, and networking.",
     ],
-  }
+  },
 ];
 
 export default function Resume() {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(0);
 
   return (
-    <section className="min-h-screen px-4 py-16 mx-auto max-w-7xl text-white">
-      <h2 className="text-4xl font-bold mb-12 text-center">Experiences</h2>
-      <div className="flex flex-col lg:flex-row gap-10">
-        <div className="flex flex-col gap-4 w-full lg:w-1/4">
+    <section className="min-h-screen py-16 text-white">
+      <h2 className="text-4xl font-bold mb-12 text-center max-w-7xl mx-auto px-4">
+        Experiences
+      </h2>
+      <div className="flex flex-col lg:flex-row gap-10 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+        {/* Left side buttons */}
+        <div className="flex flex-col gap-4 w-full lg:w-[610px]">
           {resumeItems.map((item, i) => (
-            <button
-              key={i}
-              onClick={() => setSelected(i)}
-              className={`text-left p-4 border rounded-lg transition hover:bg-zinc-800/40 whitespace-nowrap overflow-hidden text-ellipsis ${
-                selected === i ? "border-accent text-accent bg-zinc-800/60" : "border-white/20"
-              }`}
-            >
-              <h4 className="font-semibold text-base lg:text-lg leading-snug whitespace-nowrap overflow-hidden text-ellipsis">
-                {item.title}
+          <button
+            key={i}
+            onClick={() => setSelected(i)}
+            className={`flex items-center gap-4 text-left p-4 border rounded-lg transition hover:bg-zinc-800/40 w-full ${
+              selected === i
+                ? "border-accent text-accent bg-zinc-800/60"
+                : "border-white/20"
+            }`}
+          >
+            <Image
+              src={item.image}
+              alt={item.company}
+              width={32}
+              height={32}
+              className="rounded object-contain shrink-0"
+            />
+            <div className="flex flex-col min-w-0"> {/* 👈 CRITICAL */}
+              <h4 className="font-semibold text-base lg:text-lg leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+                {item.company}
               </h4>
-              <p className="text-xs lg:text-sm text-white/60 mt-1 whitespace-nowrap overflow-hidden text-ellipsis">
+              <p className="text-sm text-white/70 whitespace-nowrap overflow-hidden text-ellipsis">
+                {item.role}
+              </p>
+              <p className="text-xs text-white/50 whitespace-nowrap overflow-hidden text-ellipsis">
                 {item.date}
               </p>
-            </button>
+            </div>
+          </button>
           ))}
         </div>
 
-
-        <div className="relative w-full lg:w min-h-[340px] border rounded-xl border-white/20 bg-[#232329] p-64">
+        {/* Right side modal */}
+        <div className="relative w-full h-[480px] border rounded-xl border-white/20 bg-[#232329] px-8 py-12 overflow-hidden">
           <AnimatePresence mode="wait">
             {selected !== null && (
               <motion.div
@@ -71,18 +92,25 @@ export default function Resume() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.3 }}
-                className="absolute inset-0 p-6 overflow-y-auto"
+                className="w-full h-full p-6 overflow-y-auto flex flex-col"
               >
-                <h4 className="text-xl lg:text-2xl font-bold mb-2 leading-tight">{resumeItems[selected].title}</h4>
-                <p className="text-sm text-white/60 mb-4">{resumeItems[selected].date}</p>
+                <h4 className="text-xl lg:text-2xl font-bold mb-1 leading-tight">
+                  {resumeItems[selected].role}
+                </h4>
+                <p className="text-sm lg:text-base text-white/70 mb-1">
+                  {resumeItems[selected].company}
+                </p>
+                <p className="text-sm text-white/60 mb-4">
+                  {resumeItems[selected].date}
+                </p>
                 <Image
                   src={resumeItems[selected].image}
-                  alt={resumeItems[selected].title}
+                  alt={resumeItems[selected].company}
                   width={100}
                   height={100}
                   className="rounded-lg mb-4 object-contain"
                 />
-                <ul className="list-disc list-inside space-y-2 text-white/80 text-sm lg:text-base">
+                <ul className="list-disc list-inside space-y-2 text-white/80 text-sm lg:text-base w-full">
                   {resumeItems[selected].bullets.map((point, idx) => (
                     <li key={idx}>{point}</li>
                   ))}
