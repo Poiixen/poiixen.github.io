@@ -11,10 +11,34 @@ const resumeItems = [
     date: "Jul 2024 - Oct 2024",
     image: "/assets/theheadstarter_logo.jfif",
     bullets: [
-      "Built and deployed 5 AI projects using React JS, Next.js, Firebase, Clerk, and Vercel.",
-      "Agile methodologies with weekly sprints and CI/CD practices.",
-      "Participated in sessions with engineers from Google, YC, Stanford, Amazon.",
+      "Built a full-stack management platform using the MERN stack.",
+      "Reduced manual audit entry time by 60% with OCR.",
+      "Secured sensitive data with JWT + bcrypt.",
     ],
+    details: (
+      <div className="space-y-4">
+        <p>
+          During my time at Housing Assembly, I led the development of a MERN-based audit platform that allowed organizers to log, search, and analyze over 300 housing allocation records tied to corruption investigations.
+        </p>
+        <p>
+          I engineered an OCR pipeline using Python and Tesseract.js that could process scanned audit forms and auto-extract key information, reducing workload for field officers.
+        </p>
+        <Image
+          src="/assets/housing-platform.png"
+          alt="Housing Audit Platform"
+          width={600}
+          height={300}
+          className="rounded-lg"
+        />
+        <p>
+          I also conducted workshops with EDU Africa leadership and implemented role-based admin access to ensure data security throughout the platform.
+        </p>
+        <video controls className="w-full rounded-lg">
+          <source src="/assets/housing-demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    )
   },
   {
     company: "Headstarter AI",
@@ -41,9 +65,11 @@ const resumeItems = [
 
 export default function Resume() {
   const [selected, setSelected] = useState(0);
+  const [expanded, setExpanded] = useState(false);
+
 
   return (
-    <section className="min-h-screen py-16 text-white">
+    <section className="min-h-screen py-16 text-white mb-24">
       <h2 className="text-4xl font-bold mb-12 text-center max-w-7xl mx-auto px-4">
         Experiences
       </h2>
@@ -83,7 +109,7 @@ export default function Resume() {
         </div>
 
         {/* Right side modal */}
-        <div className="relative w-full h-[480px] border rounded-xl border-white/20 bg-[#232329] px-8 py-12 overflow-hidden">
+        <div className="relative w-full border rounded-xl border-white/20 bg-[#232329] px-8 py-12">
           <AnimatePresence mode="wait">
             {selected !== null && (
               <motion.div
@@ -92,7 +118,7 @@ export default function Resume() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.3 }}
-                className="w-full h-full p-6 overflow-y-auto flex flex-col"
+                className="w-full p-6 flex flex-col"
               >
                 <h4 className="text-xl lg:text-2xl font-bold mb-1 leading-tight">
                   {resumeItems[selected].role}
@@ -110,6 +136,12 @@ export default function Resume() {
                   height={100}
                   className="rounded-lg mb-4 object-contain"
                 />
+                {expanded && resumeItems[selected].details && (
+                  <div className="mt-6 text-white/90 text-sm lg:text-base">
+                    {resumeItems[selected].details}
+                  </div>
+                )}
+
                 <ul className="list-disc list-inside space-y-2 text-white/80 text-sm lg:text-base w-full">
                   {resumeItems[selected].bullets.map((point, idx) => (
                     <li key={idx}>{point}</li>
@@ -118,11 +150,16 @@ export default function Resume() {
               </motion.div>
             )}
           </AnimatePresence>
-          {selected === null && (
-            <div className="text-white/50 text-center mt-20">
-              <p>Select an experience to view more details</p>
-            </div>
-          )}
+          {selected !== null && (
+          <div className="mt-4 text-center">
+            <button
+              onClick={() => setExpanded((prev) => !prev)}
+              className="text-accent underline hover:opacity-80 transition"
+            >
+              {expanded ? "Show Less" : "Read More"}
+            </button>
+          </div>
+        )}
         </div>
       </div>
     </section>

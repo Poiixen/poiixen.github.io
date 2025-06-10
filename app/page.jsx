@@ -66,22 +66,22 @@ const Home = () => {
       <Stats />
 
       {/* Resume Section */}
-      <section id="resume" className="h-screen flex flex-col justify-center items-center mt-40 mb-80">
+      <section id="resume" className="min-h-screen flex flex-col justify-center items-center mt-40 mb-32">
         <Resume />
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="h-screen mx-auto flex flex-col justify-center items-center mb-10">
+      <section id="projects" className="min-h-screen mx-auto flex flex-col justify-center items-center mb-10">
         <Work />
       </section>
 
       {/* About Section */}
-      <section id="about" className="h-screen flex flex-col justify-center items-center">
+      <section id="about" className="min-h-screen flex flex-col justify-center items-center">
         <About />
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="h-screen flex flex-col justify-center items-center">
+      <section id="contact" className="min-h-screen flex flex-col justify-center items-center">
         <Contact />
       </section>
     </section>
