@@ -7,7 +7,7 @@ const About = () => {
       <h1 className="text-4xl font-bold mb-4">About Me</h1>
       <div className="flex flex-col items-center mb-8">
         <Image
-          src="/path/to/your/photo.jpg" // Replace with your image path
+          src="" // Replace with your image path
           alt="My Photo"
           width={150}
           height={150}

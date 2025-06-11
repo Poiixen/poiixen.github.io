@@ -9,9 +9,9 @@ const resumeItems = [
     company: "Housing Assembly, EDU Africa",
     role: "Project Manager, Software Engineer",
     date: "Jul 2024 - Oct 2024",
-    image: "/assets/theheadstarter_logo.jfif",
+    image: "/assets/orgs/housingassembly/logo.png",
     bullets: [
-      "Built a full-stack management platform using the MERN stack.",
+      "Built a full-stack management platform using MERN stack to CRUD 300+ housing allocation records, strengthening the legal foundation for a class action lawsuit against corruption in South Africa’s governmental housing waitlist",
       "Reduced manual audit entry time by 60% with OCR.",
       "Secured sensitive data with JWT + bcrypt.",
     ],
@@ -24,7 +24,7 @@ const resumeItems = [
           I engineered an OCR pipeline using Python and Tesseract.js that could process scanned audit forms and auto-extract key information, reducing workload for field officers.
         </p>
         <Image
-          src="/assets/housing-platform.png"
+          src="/assets/orgs/housingassembly/logo.png"
           alt="Housing Audit Platform"
           width={600}
           height={300}
@@ -44,7 +44,7 @@ const resumeItems = [
     company: "Headstarter AI",
     role: "Software Engineer Fellow",
     date: "Jul 2024 - Oct 2024",
-    image: "/assets/theheadstarter_logo.jfif",
+    image: "/assets/orgs/theheadstarter_logo.jpeg",
     bullets: [
       "Built and deployed 5 AI projects using React JS, Next.js, Firebase, Clerk, and Vercel.",
       "Agile methodologies with weekly sprints and CI/CD practices.",
@@ -55,7 +55,7 @@ const resumeItems = [
     company: "Code2040",
     role: "Software Engineer Fellow",
     date: "Jul 2022 - Aug 2024",
-    image: "/assets/code2040.png",
+    image: "/assets/orgs/code2040.png",
     bullets: [
       "Career accelerator for Black and Latine CS students.",
       "Focused on equity advocacy, workshops, and networking.",
@@ -120,22 +120,28 @@ export default function Resume() {
                 transition={{ duration: 0.3 }}
                 className="w-full p-6 flex flex-col"
               >
-                <h4 className="text-xl lg:text-2xl font-bold mb-1 leading-tight">
+            <div className="flex items-start justify-between mb-4 gap-4">
+              <div className="flex-1">
+                <h4 className="text-xl lg:text-2xl font-bold leading-tight">
                   {resumeItems[selected].role}
                 </h4>
-                <p className="text-sm lg:text-base text-white/70 mb-1">
+                <p className="text-sm lg:text-base text-white/70">
                   {resumeItems[selected].company}
                 </p>
-                <p className="text-sm text-white/60 mb-4">
+                <p className="text-sm text-white/60">
                   {resumeItems[selected].date}
                 </p>
-                <Image
-                  src={resumeItems[selected].image}
-                  alt={resumeItems[selected].company}
-                  width={100}
-                  height={100}
-                  className="rounded-lg mb-4 object-contain"
-                />
+              </div>
+              <Image
+                src={resumeItems[selected].image}
+                alt={resumeItems[selected].company}
+                width={80}
+                height={80}
+                className="rounded-lg object-contain shrink-0"
+              />
+            </div>
+
+
                 {expanded && resumeItems[selected].details && (
                   <div className="mt-6 text-white/90 text-sm lg:text-base">
                     {resumeItems[selected].details}
