@@ -6,13 +6,6 @@ const About = () => {
     <section className="min-h-screen flex flex-col items-center justify-center text-white p-8">
       <h1 className="text-4xl font-bold mb-4">About Me</h1>
       <div className="flex flex-col items-center mb-8">
-        <Image
-          src="" // Replace with your image path
-          alt="My Photo"
-          width={150}
-          height={150}
-          className="rounded-full mb-4" // Adjust as needed
-        />
         <p className="max-w-xl text-center">
           Hi, I&apos;m Jorge Garcia, a passionate software engineer with a knack for creating dynamic and user-friendly applications. I love problem-solving and continuously seek to improve my skills in technology.
         </p>

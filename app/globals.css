@@ -1,18 +1,24 @@
+/* globals.css */
+
+/* Import Tailwind's base, components, and utilities */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@layer base{
-    body{
-        @apply font-primary bg-primary text-white leading-loose;
-    }
-    h1 {
-        @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
-    }
-    h2 {
-        @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
-    }
-    h3 {
-        @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
-    }
+@layer base {
+  body {
+    @apply bg-primary text-white leading-loose;
+    font-family: var(--font-jetbrains-mono), sans-serif; /* Use the JetBrains Mono font */
+  }
+
+  /* Headings */
+  h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+  h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
 }
