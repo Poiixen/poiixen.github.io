@@ -44,6 +44,16 @@ const resumeItems = [
       </div>
     )
   },
+    {
+    company: "Codepath",
+    role: "Teaching Assistant/Tech Fellow",
+    date: "Jan 2025 - April 2025",
+    image: "/assets/orgs/housingassembly/logo.png",
+    bullets: [
+      "Mentored and guided 100+ CodePath students to facilitate the understanding of fundamental computer science topics, ensuring successful course completion.",
+      "Resolved technical issues and software-related queries during labs and independent study sessions to ensure a smooth learning experience."
+    ],
+  },
   {
     company: "Headstarter AI",
     role: "Software Engineer Fellow",
