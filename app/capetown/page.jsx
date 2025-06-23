@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const slideshowImages = [
   "/assets/capetown/ha.jpg",
@@ -28,13 +29,17 @@ export default function CapeTownPage() {
         {/* Slideshow Hero */}
         <div className="relative w-full h-72 md:h-[450px] overflow-hidden rounded-3xl shadow-lg">
           {slideshowImages.map((src, i) => (
-            <img
+            <Image
               key={i}
               src={src}
               alt={`Slide ${i}`}
-              className={`absolute w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              fill
+              className={`object-cover transition-opacity duration-1000 ease-in-out ${
                 i === currentSlide ? "opacity-100" : "opacity-0"
               }`}
+              style={{ position: "absolute" }}
+              sizes="100vw"
+              priority={i === 0}
             />
           ))}
         </div>
@@ -69,21 +74,21 @@ export default function CapeTownPage() {
 
         {/* The Problem */}
         <section>
-          <h2 className="text-2xl font-semibold mb-2">What's happening?</h2>
-            <p className="text-white/80 leading-relaxed">
-              During the apartheid era, the South African government enforced a system of racial segregation that denied many people access to basic rights, including housing.
-              Many were forcibly relocated to the outskirts of cities, where they lived in overcrowded and unsafe conditions with little hope of improvement. These eventually became informal settlements. 
-              <br /><br />
-              Although the apartheid system officially ended in 1994, its legacy continues to impact communities today. Many people currently live in these informal settlements and still lack essential services like water and sanitation.
-              <br /><br />
-              While the government has made promises to address these issues, progress has been slow, corrupt, and many communities continue to struggle.
-              <br /><br />
-              The Housing Assembly works to confront these challenges by advocating for fair housing policies and holding the government accountable. They are currently preparing a class action lawsuit against the South African government for its failure to provide adequate housing to its citizens. 
-              <br /><br />
-              On-site, they have collected thousands of paper-based audits, but building a strong legal case requires demonstrating the scale and systemic injustice of the problem.
-              <br /><br />
-              That’s where HouseAudit comes in.
-            </p>
+          <h2 className="text-2xl font-semibold mb-2">What&apos;s happening?</h2>
+          <p className="text-white/80 leading-relaxed">
+            During the apartheid era, the South African government enforced a system of racial segregation that denied many people access to basic rights, including housing.
+            Many were forcibly relocated to the outskirts of cities, where they lived in overcrowded and unsafe conditions with little hope of improvement. These eventually became informal settlements. 
+            <br /><br />
+            Although the apartheid system officially ended in 1994, its legacy continues to impact communities today. Many people currently live in these informal settlements and still lack essential services like water and sanitation.
+            <br /><br />
+            While the government has made promises to address these issues, progress has been slow, corrupt, and many communities continue to struggle.
+            <br /><br />
+            The Housing Assembly works to confront these challenges by advocating for fair housing policies and holding the government accountable. They are currently preparing a class action lawsuit against the South African government for its failure to provide adequate housing to its citizens. 
+            <br /><br />
+            On-site, they have collected thousands of paper-based audits, but building a strong legal case requires demonstrating the scale and systemic injustice of the problem.
+            <br /><br />
+            That&apos;s where HouseAudit comes in.
+          </p>
         </section>
 
         {/* Contribution */}
@@ -94,7 +99,6 @@ export default function CapeTownPage() {
             real-time statistics. This empowers Housing Assembly to take legal action using verified audit trails.
             <br /><br />
             Before HouseAudit, these audits were stored in filing cabinets, making them difficult to analyze or use effectively. Now, the platform can securely store up to 600,000 audits in a structured and searchable digital format.
-              
           </p>
         </section>
 
@@ -107,10 +111,12 @@ export default function CapeTownPage() {
             <li>Tailwind CSS for styling</li>
             <li>Frontend hosted on Vercel, Backend on Render</li>
           </ul>
-          <img
+          <Image
             src="/assets/capetown/audit_cap_ARCHITECTURE.png"
             alt="Architecture Diagram"
-            className="mt-4 rounded-xl shadow-lg w-full max-h-[400px] object-contain"
+            width={1000}
+            height={400}
+            className="mt-4 rounded-xl shadow-lg w-full object-contain max-h-[400px]"
           />
         </section>
 
@@ -134,7 +140,7 @@ export default function CapeTownPage() {
         <section>
           <h2 className="text-3xl font-bold mb-4">Cape Town Reflection</h2>
           <p className="text-white/90 leading-relaxed">
-            Cape Town gave me more than just a project—it gave me perspective. From hiking Lion’s Head to
+            Cape Town gave me more than just a project—it gave me perspective. From hiking Lion&apos;s Head to
             connecting with students at DUT and high schoolers in Hillview, every experience taught me something
             new about community, struggle, and resilience.
           </p>
