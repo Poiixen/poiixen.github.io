@@ -170,8 +170,8 @@ export default function CapeTownPage() {
             <br /><br />
             Of course, none of this would’ve been the same without the people I shared it with. I was lucky to be surrounded by an incredible group of UF students who were also part of the program—each one talented, thoughtful, and driven in their own way. Whether we were troubleshooting bugs, sharing stories on long van rides, or laughing over dinner after a long day, these people became more than just teammates—they became some of the closest friends I’ve made in college. The bond we built through this journey is something I’ll carry with me long after the project is over.
             <br /><br />
-            Cape Town reminded me that building impactful tech isn't just about the architecture of your codebase, but about
-            understanding the people you're building for. And in between the projects, the hikes, the safaris, and the dance floors,
+            Cape Town reminded me that building impactful tech isn&apos;t just about the architecture of your codebase, but about
+            understanding the people you&apos;re building for. And in between the projects, the hikes, the safaris, and the dance floors,
             I found something that’ll stick with me forever: a deeper sense of empathy, and a drive to keep showing up for others.
           </p>
         </section>
