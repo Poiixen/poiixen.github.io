@@ -140,11 +140,42 @@ export default function CapeTownPage() {
         <section>
           <h2 className="text-3xl font-bold mb-4">Cape Town Reflection</h2>
           <p className="text-white/90 leading-relaxed">
-            Cape Town gave me more than just a project—it gave me perspective. From hiking Lion&apos;s Head to
-            connecting with students at DUT and high schoolers in Hillview, every experience taught me something
-            new about community, struggle, and resilience.
+            Cape Town gave me more than just a project—it gave me perspective. From the very beginning, it was clear this
+            experience would be more than the internship project itself. Yes, we built a platform to fight housing injustice but the
+            memories that shaped me most came from the people, the places, and the stories I encountered along the way.
+            <br /><br />
+            We hiked Lion&apos;s Head before sunrise, stood at the top as the sky lit up over the city, and later explored
+            Table Mountain and Signal Hill. We walked through colorful Bo-Kaap, visited the District Six Museum, and saw
+            the scars apartheid left behind. We listened to stories from a former political prisoner, Lionel Davis, who shared what 
+            it meant to be exiled on your own land. That moment stayed with me.
+            <br /><br />
+            In our free time, we went to the V&A Waterfront and wandered through local artisan markets. We tried traditional 
+            South African food—braai, bunny chow, pap, smileys, koeksisters and danced with locals
+            in township streets, letting go of every inhibition. There were evenings where strangers became friends over shared meals,
+            music, and laughter that echoed into the night.
+            <br /><br />
+            Outside of Cape Town, we traveled to Durban, where we visited Durban University of Technology and spoke with students across
+            middle, and high schools. Sharing our journey with them and hearing theirs was deeply meaningful. I think we were able to inspire 
+            these students as well! But their energy, curiosity, and ambition reminded me why global connection matters. We weren’t just showing up as visitors, 
+            but as students learning, too.
+            <br /><br />
+            We ended our journey in St. Lucia, where we went on safari drives through iSimangaliso Wetland Park, spotting giraffes,
+            zebras, and rhinos in the wild. We took a boat ride to see hippos and crocodiles drifting lazily through the water,
+            and cooled off at the beach after days of travel. Every day brought something new, from wildlife encounters to
+            spontaneous dance battles to deep conversations that challenged how I see the world.
+            <br /><br />
+            These weren’t just tourist attractions they were parts of a story. A story that I feel
+            incredibly privileged to have stepped into, even briefly. Through it all, I grew as a developer but also as a person.
+            I saw firsthand how culture, history, and community all inform the problems we aim to solve with technology.
+            <br /><br />
+            Of course, none of this would’ve been the same without the people I shared it with. I was lucky to be surrounded by an incredible group of UF students who were also part of the program—each one talented, thoughtful, and driven in their own way. Whether we were troubleshooting bugs, sharing stories on long van rides, or laughing over dinner after a long day, these people became more than just teammates—they became some of the closest friends I’ve made in college. The bond we built through this journey is something I’ll carry with me long after the project is over.
+            <br /><br />
+            Cape Town reminded me that building impactful tech isn't just about the architecture of your codebase, but about
+            understanding the people you're building for. And in between the projects, the hikes, the safaris, and the dance floors,
+            I found something that’ll stick with me forever: a deeper sense of empathy, and a drive to keep showing up for others.
           </p>
         </section>
+
       </div>
     </div>
   );
