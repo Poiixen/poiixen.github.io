@@ -48,7 +48,7 @@ const resumeItems = [
     company: "Codepath",
     role: "Teaching Assistant/Tech Fellow",
     date: "Jan 2025 - April 2025",
-    image: "/assets/orgs/housingassembly/logo.png",
+    image: "/assets/orgs/codepath.jpg",
     bullets: [
       "Mentored and guided 100+ CodePath students to facilitate the understanding of fundamental computer science topics, ensuring successful course completion.",
       "Resolved technical issues and software-related queries during labs and independent study sessions to ensure a smooth learning experience."
@@ -91,8 +91,13 @@ export default function Resume() {
         <div className="flex flex-col gap-4 w-full lg:w-[610px]">
           {resumeItems.map((item, i) => (
             <button
+
               key={i}
-              onClick={() => setSelected(i)}
+              onClick={() => {
+                setExpanded(false);
+                setSelected(i);
+                
+              }}
               className={`flex items-center gap-4 text-left p-4 border rounded-lg transition hover:bg-zinc-800/40 w-full ${
                 selected === i ? "border-accent text-accent bg-zinc-800/60" : "border-white/20"
               }`}
@@ -119,15 +124,15 @@ export default function Resume() {
           ))}
         </div>
 
-        <div className="relative w-full border rounded-xl border-white/20 bg-[#232329] px-8 py-12">
-          <AnimatePresence mode="sync">
+        <div className="relative w-full border rounded-xl border-white/20 bg-[#232329] px-8 py-12 min-h-[400px]">
+          <AnimatePresence mode="wait">
             {selected !== null && (
               <motion.div
                 key={selected}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.3 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.2 }}
                 className="w-full p-6 flex flex-col"
               >
                 <div className="flex items-start justify-between mb-4 gap-4">
@@ -148,7 +153,7 @@ export default function Resume() {
                     className="rounded-lg object-contain shrink-0"
                   />
                 </div>
-
+                
                 {expanded && resumeItems[selected].details ? (
                   <div className="mt-6 text-white/90 text-sm lg:text-base">
                     {resumeItems[selected].details}
@@ -162,12 +167,12 @@ export default function Resume() {
                 )}
               </motion.div>
             )}
-          </AnimatePresence>
           {selected !== null && resumeItems[selected].details && (
             <div className="mt-6 flex justify-center gap-4 flex-wrap">
               {!expanded ? (
                 <button
                   onClick={() => setExpanded(true)}
+
                   className="text-accent underline hover:opacity-80 transition text-sm"
                 >
                   Read More
@@ -196,6 +201,7 @@ export default function Resume() {
               )}
             </div>
           )}
+          </AnimatePresence>
         </div>
       </div>
     </section>
