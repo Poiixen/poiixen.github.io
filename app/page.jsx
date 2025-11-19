@@ -65,6 +65,41 @@ const Home = () => {
 
       <Stats />
 
+      {/* Spacer Section with Scroll Indicator */}
+      <section className="min-h-[45vh] flex flex-col items-center justify-start pt-16 py-10">
+        <div className="flex flex-col items-center gap-4">
+          <p className="text-white/60 text-sm uppercase tracking-wider">Scroll to explore</p>
+          <div className="flex flex-col items-center animate-bounce">
+            <svg
+              className="w-8 h-8 text-accent"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <svg
+              className="w-8 h-8 text-accent -mt-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="min-h-screen flex flex-col justify-center items-center">
         <About />
