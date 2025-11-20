@@ -12,9 +12,10 @@ const resumeItems = [
     image: "/assets/orgs/housingassembly/logo.png",
     videoSrc: "/assets/housing-demo.mp4", // Added video source for demonstration
     bullets: [
-      "Built a full-stack management platform using MERN stack to CRUD 300+ housing allocation records, strengthening the legal foundation for a class action lawsuit against corruption in South Africa’s governmental housing waitlist",
-      "Reduced manual audit entry time by 60% with OCR.",
-      "Secured sensitive data with JWT + bcrypt.",
+      "Built a full-stack management platform using MERN stack to CRUD 300+ housing allocation records, strengthening the legal foundation for a class action lawsuit against corruption in South Africa's governmental housing waitlist",
+      "Developed OCR functionality with Python and Tesseract.js to extract data from scanned audit forms, cutting manual entry time by over 60% and boosting data processing throughput by 2.5x",
+      "Implemented secure admin-only controls using JWT authentication and bcrypt hashing, guaranteeing 100% data integrity and confidentiality of sensitive records",
+      "Consulted teams of fellow project managers to align technical goals across multiple EDU Africa initiatives",
     ],
     details: (
       <div className="space-y-4">
@@ -44,7 +45,33 @@ const resumeItems = [
       </div>
     )
   },
-    {
+  {
+    company: "Florida Community Innovation",
+    role: "Software Engineering Intern",
+    date: "Jan 2025 - April 2025",
+    image: "/assets/orgs/fci.jpg",
+    bullets: [
+      "Working directly with Miami-Dade County government, leveraging JavaScript, React, Tailwind CSS, Node.js, and Firebase to build a user-friendly platform designed to simplify recycling efforts across 34 municipalities",
+      "Collaborated on developing the Florida Resource Map: web tool connecting 1000+ vulnerable communities to 500+ essential services, with dynamic search and collaborative research input from 3 universities",
+    ],
+    details: (
+      <div className="space-y-4">
+        <p>
+          At Florida Community Innovation, I had the opportunity to work on impactful civic technology projects that directly serve communities across Florida. My role involved collaborating with government agencies and academic institutions to build digital tools that make essential services more accessible to those who need them most.
+        </p>
+        <p>
+          One of my primary projects involved working directly with Miami-Dade County government to develop a comprehensive recycling platform. Using JavaScript, React, Tailwind CSS, Node.js, and Firebase, I helped build a user-friendly system designed to simplify and streamline recycling efforts across 34 municipalities. The platform aims to make it easier for residents to understand recycling guidelines, locate recycling centers, and participate in sustainability initiatives across the county.
+        </p>
+        <p>
+          I also contributed to the development of the <a href="https://www.floridaresourcemap.org/" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:opacity-80">Florida Resource Map</a>, a critical web tool that connects over 1,000 vulnerable communities to more than 500 essential services throughout Florida. This project involved implementing dynamic search functionality, allowing users to quickly find resources like food banks, healthcare services, legal aid, and housing assistance in their area. The platform was developed with collaborative research input from three universities, ensuring the data was comprehensive, accurate, and truly served the needs of Florida&apos;s most vulnerable populations.
+        </p>
+        <p>
+          Working on these projects showed me the real-world impact that thoughtful software engineering can have on communities. By making critical information more accessible and government services easier to navigate, we&apos;re helping to bridge the digital divide and ensure that everyone—regardless of their technical expertise—can access the resources they need.
+        </p>
+      </div>
+    )
+  },
+  {
     company: "Codepath",
     role: "Teaching Assistant/Tech Fellow",
     date: "Jan 2025 - April 2025",
