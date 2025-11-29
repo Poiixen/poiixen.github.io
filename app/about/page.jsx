@@ -82,7 +82,7 @@ const About = () => {
               <div className="bg-gradient-to-br from-gray-800/50 to-gray-800/30 p-6 rounded-lg backdrop-blur-sm border border-accent/10 hover:border-accent/30 transition-all">
                 <h3 className="text-xl font-semibold mb-2 text-accent">Sports!</h3>
                   <p className="text-gray-300 text-sm">
-                    Outside of work, you can find me skateboarding around campus or training with UF's competitive boxing team.
+                    Outside of work, you can find me skateboarding around campus or training with UF&apos;s competitive boxing team.
                   </p>
               </div>
               <div className="bg-gradient-to-br from-gray-800/50 to-gray-800/30 p-6 rounded-lg backdrop-blur-sm border border-accent/10 hover:border-accent/30 transition-all">
