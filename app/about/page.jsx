@@ -29,7 +29,7 @@ const About = () => {
             {/* Large photo - top left */}
             <div className="col-span-2 row-span-2 relative h-64 bg-gradient-to-br from-accent/20 to-purple-500/20 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
               <div className="absolute inset-0 flex items-center justify-center text-accent/40 text-sm">
-                Add Your Photo
+                TODO: photo
               </div>
               {/* <Image src="/path-to-your-photo.jpg" alt="Jorge Garcia" fill className="object-cover" /> */}
             </div>
@@ -57,8 +57,9 @@ const About = () => {
 
           {/* Bio */}
           <div className="bg-gray-800/30 p-8 rounded-xl backdrop-blur-sm border border-accent/10">
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Hi, I&apos;m <span className="text-accent font-semibold">Jorge Garcia</span>, a passionate software engineer with a knack for creating dynamic and user-friendly applications. I love problem-solving and continuously seek to improve my skills in technology.
+            <p className="text-md text-gray-300 leading-relaxed">
+              Hi, I&apos;m <span className="text-accent font-semibold">Jorge Garcia</span>, or <span className="text-accent font-semibold">Tito</span>, a passionate driven computer science student 
+              eager to work on projects that benefit underrepresented communities. <br /><br /> My character is defined by quality-oriented work and a strong determination to make a meaningful impact.
             </p>
           </div>
 
@@ -79,10 +80,10 @@ const About = () => {
                 </p>
               </div>
               <div className="bg-gradient-to-br from-gray-800/50 to-gray-800/30 p-6 rounded-lg backdrop-blur-sm border border-accent/10 hover:border-accent/30 transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-accent">Skateboarding</h3>
-                <p className="text-gray-300 text-sm">
-                  When I&apos;m not coding or playing guitar, I&apos;m skateboarding—staying active and pushing limits.
-                </p>
+                <h3 className="text-xl font-semibold mb-2 text-accent">Sports!</h3>
+                  <p className="text-gray-300 text-sm">
+                    Outside of work, you can find me skateboarding around campus or training with UF's competitive boxing team.
+                  </p>
               </div>
               <div className="bg-gradient-to-br from-gray-800/50 to-gray-800/30 p-6 rounded-lg backdrop-blur-sm border border-accent/10 hover:border-accent/30 transition-all">
                 <h3 className="text-xl font-semibold mb-2 text-accent">Creative Projects</h3>
