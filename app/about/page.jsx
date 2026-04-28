@@ -26,31 +26,28 @@ const About = () => {
         {/* Left Column - Photo Collage */}
         <div className="lg:col-span-1">
           <div className="grid grid-cols-2 gap-4">
-            {/* Large photo - top left */}
-            <div className="col-span-2 row-span-2 relative h-64 bg-gradient-to-br from-accent/20 to-purple-500/20 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
-              <div className="absolute inset-0 flex items-center justify-center text-accent/40 text-sm">
-                TODO: photo
-              </div>
-              {/* <Image src="/path-to-your-photo.jpg" alt="Jorge Garcia" fill className="object-cover" /> */}
+            {/* Large photo - top */}
+            <div className="col-span-2 relative h-64 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
+              <Image src="/assets/collage/looseys.jpg" alt="Loosey's" fill className="object-cover" />
             </div>
 
             {/* Small photo - bottom left */}
-            <div className="relative h-32 bg-gradient-to-br from-blue-500/20 to-accent/20 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
-              <div className="absolute inset-0 flex items-center justify-center text-accent/40 text-xs text-center px-2">
-                Guitar
-              </div>
-              {/* <Image src="/path-to-guitar-photo.jpg" alt="Playing guitar" fill className="object-cover" /> */}
+            <div className="relative h-48 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
+              <Image src="/assets/collage/skateboard.jpg" alt="Skateboarding" fill className="object-cover" />
             </div>
 
             {/* Small photo - bottom right */}
-            <div className="relative h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
-              <div className="absolute inset-0 flex items-center justify-center text-accent/40 text-xs text-center px-2">
-                Skating
-              </div>
-              {/* <Image src="/path-to-skating-photo.jpg" alt="Skateboarding" fill className="object-cover" /> */}
+            <div className="relative h-48 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
+              <Image src="/assets/collage/boxing.jpg" alt="Boxing" fill className="object-cover object-[50%_25%]" />
             </div>
+
+             {/* Large photo - top */}
+            <div className="col-span-2 relative h-64 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
+              <Image src="/assets/collage/chile.jpg" alt="Loosey's" fill className="object-cover object-[35%_45%]" />
+            </div>
+        </div>  
           </div>
-        </div>
+         
 
         {/* Middle & Right Columns - Content */}
         <div className="lg:col-span-2 flex flex-col gap-8">
@@ -58,7 +55,7 @@ const About = () => {
           {/* Bio */}
           <div className="bg-gray-800/30 p-8 rounded-xl backdrop-blur-sm border border-accent/10">
             <p className="text-md text-gray-300 leading-relaxed">
-              Hi, I&apos;m <span className="text-accent font-semibold">Jorge Garcia</span>, or <span className="text-accent font-semibold">Tito</span>, a passionate driven computer science student 
+              Hi, I&apos;m <span className="text-accent font-semibold">Jorge Garcia</span>, or <span className="text-accent font-semibold">Tito</span>, a passionate compsci student 
               eager to work on projects that benefit underrepresented communities. <br /><br /> My character is defined by quality-oriented work and a strong determination to make a meaningful impact.
             </p>
           </div>
@@ -97,7 +94,6 @@ const About = () => {
           {/* Skills */}
           <div>
             <h2 className="text-3xl font-semibold mb-6 text-accent">Technical Skills</h2>
-
             <div className="space-y-3">
               {/* Programming Languages */}
               <div className="bg-gray-800/30 rounded-lg backdrop-blur-sm border border-accent/10">
