@@ -26,25 +26,36 @@ const About = () => {
         {/* Left Column - Photo Collage */}
         <div className="lg:col-span-1">
           <div className="grid grid-cols-2 gap-4">
-            {/* Large photo - top */}
+            {/* Large photo - drumming 1 */}
             <div className="col-span-2 relative h-64 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
               <Image src="/assets/collage/looseys.jpg" alt="Loosey's" fill className="object-cover" />
             </div>
 
-            {/* Small photo - bottom left */}
+            {/* Small photo - skateboard 2*/}
             <div className="relative h-48 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
               <Image src="/assets/collage/skateboard.jpg" alt="Skateboarding" fill className="object-cover" />
             </div>
 
-            {/* Small photo - bottom right */}
+            {/* Small photo - boxing 3*/}
             <div className="relative h-48 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
               <Image src="/assets/collage/boxing.jpg" alt="Boxing" fill className="object-cover object-[50%_25%]" />
             </div>
 
-             {/* Large photo - top */}
+             {/* Large photo - chile 4 */}
             <div className="col-span-2 relative h-64 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
               <Image src="/assets/collage/chile.jpg" alt="Loosey's" fill className="object-cover object-[35%_45%]" />
             </div>
+
+            {/* small photo - moto 5 */}
+            <div className="relative h-48 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
+              <Image src="/assets/collage/moto.jpg" alt="Moto" fill className="object-cover" />
+            </div>
+
+            {/* Small photo - bottom left */}
+            <div className="relative h-48 rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300">
+              <Image src="/assets/collage/gypsy.jpg" alt="Skateboarding" fill className="object-cover" />
+            </div>
+
         </div>  
           </div>
          
